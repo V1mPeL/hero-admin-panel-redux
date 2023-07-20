@@ -1,15 +1,9 @@
 {
   "heroes": [
     {
-      "id": "e443fbed-5d5f-4b03-add4-d7955d2ba65c",
-      "name": "Vitalik",
-      "description": "I can fly",
-      "element": "wind"
-    },
-    {
-      "id": "88e3ed04-d26d-4a6b-b167-647c31718f17",
-      "name": "Jambo",
-      "description": "I use fireballs",
+      "id": "01eada10-aba2-4b00-a997-4e3532f1cb54",
+      "name": "Valir",
+      "description": "I throw fireballs",
       "element": "fire"
     }
   ],
