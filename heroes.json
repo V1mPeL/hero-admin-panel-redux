@@ -1,10 +1,43 @@
 {
-  "heroes": [],
+  "heroes": [
+    {
+      "id": "e443fbed-5d5f-4b03-add4-d7955d2ba65c",
+      "name": "Vitalik",
+      "description": "I can fly",
+      "element": "wind"
+    },
+    {
+      "id": "88e3ed04-d26d-4a6b-b167-647c31718f17",
+      "name": "Jambo",
+      "description": "I use fireballs",
+      "element": "fire"
+    }
+  ],
   "filters": [
-    "all",
-    "fire",
-    "water",
-    "wind",
-    "earth"
+    {
+      "name": "all",
+      "label": "All",
+      "className": "btn-outline-dark"
+    },
+    {
+      "name": "fire",
+      "label": "Fire",
+      "className": "btn-danger"
+    },
+    {
+      "name": "water",
+      "label": "Water",
+      "className": "btn-primary"
+    },
+    {
+      "name": "wind",
+      "label": "Wind",
+      "className": "btn-success"
+    },
+    {
+      "name": "earth",
+      "label": "Earth",
+      "className": "btn-secondary"
+    }
   ]
 }
