@@ -5,6 +5,12 @@
       "name": "Valir",
       "description": "I throw fireballs",
       "element": "fire"
+    },
+    {
+      "id": "9189024b-dd0f-4d5f-af3a-e6ffc1dd548e",
+      "name": "Test Unit",
+      "description": "Test",
+      "element": "water"
     }
   ],
   "filters": [
