@@ -2,13 +2,15 @@ import {useHttp} from '../../hooks/http.hook';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import classNames from 'classnames';
+import store from '../../store';
 
-import { activeFilterChanged, fetchFilters, filterHeroes } from "./filtersSlice";
+import { activeFilterChanged, fetchFilters, selectAll } from './filtersSlice';
 import Spinner from '../spinner/Spinner';
 
 const HeroesFilters = () => {
 
-    const {filters, filtersLoadingStatus, activeFilter} = useSelector(state => state.filters);
+    const {filtersLoadingStatus, activeFilter} = useSelector(state => state.filters);
+    const filters = selectAll(store.getState());
     const dispatch = useDispatch();
     const {request} = useHttp();
 
@@ -21,12 +23,12 @@ const HeroesFilters = () => {
     if (filtersLoadingStatus === "loading") {
         return <Spinner/>;
     } else if (filtersLoadingStatus === "error") {
-        return <h5 className="text-center mt-5">Loading error</h5>
+        return <h5 className="text-center mt-5">Ошибка загрузки</h5>
     }
 
     const renderFilters = (arr) => {
         if (arr.length === 0) {
-            return <h5 className="text-center mt-5">filters not found</h5>
+            return <h5 className="text-center mt-5">Фильтры не найдены</h5>
         }
 
         return arr.map(({name, className, label}) => {
@@ -49,7 +51,7 @@ const HeroesFilters = () => {
     return (
         <div className="card shadow-lg mt-4">
             <div className="card-body">
-                <p className="card-text">Filter by elements</p>
+                <p className="card-text">Отфильтруйте героев по элементам</p>
                 <div className="btn-group">
                     {elements}
                 </div>
